@@ -1,7 +1,9 @@
 const webpack = require('webpack')
+require('server')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
+    mode: 'production',
     entry: './src/index.jsx',
     output: {
         path: __dirname + '/public',
@@ -9,6 +11,7 @@ module.exports = {
     },
     devServer: {
         port: 8080,
+        host: '0.0.0.0',
         contentBase: './public',
     },
     resolve: {

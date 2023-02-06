@@ -1,7 +1,7 @@
 import React from "react";
 
 export default props => (
-    <div>
-        <h1>Nova Usuário</h1>
+    <div className="nav-tabs-custom">
+        {props.children}
     </div>
 )

@@ -4,12 +4,18 @@ import MenuTree from "./MenuTree";
 
 export default props => (
     <ul className="sidebar-menu">
-        <MenuItem path="#" label='Dashboard' icon='dashboard' />
-        <MenuTree label='Cadastro' icon='edit'>
-            <MenuItem path='#newAnalysis'
-                label='Análises' icon='plus' />
-            <MenuItem path='#newUser'
-                label='Usuários' icon='user-plus' />
+        <MenuTree label='Análises' icon='edit'>
+            <MenuItem path='#analises'
+                label='Nova Análise' icon='plus' />
         </MenuTree>
+
+        <MenuTree label='Consultas' icon='search'>
+            <MenuTree label='Referencias' icon='search'>
+                <MenuItem path='#siglasTipos'
+                    label='Siglas' icon='search' />
+            </MenuTree>
+
+        </MenuTree>
+
     </ul>
 )

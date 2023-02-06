@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --inline --hot",
-    "prod": "webpack --progess -p"
+    "start": "webpack server --open --config webpack.config.js",
+    "production": "webpack --progress -p -colors --inline --hot"
   },
   "devDependencies": {
     "admin-lte": "2.3.6",
@@ -37,5 +38,24 @@
     "style-loader": "0.13.1",
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2"
+  },
+  "dependencies": {
+    "js-file-download": "^0.4.12",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.7.0",
+    "react-semantic-redux-form": "^1.2.7",
+    "semantic-ui-react": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

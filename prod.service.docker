@@ -1,0 +1,17 @@
+FROM node:lts
+MAINTAINER Luan Melo - luan.sm50@gmail.com
+
+RUN apt-get update
+
+WORKDIR /opt/preposicao/app-votos-front/shared
+
+COPY src/ src/
+COPY public ./public/
+COPY package.json package.json
+COPY webpack.config.js webpack.config.js
+
+RUN yarn
+
+EXPOSE 8080
+
+CMD ["yarn", "production"]
